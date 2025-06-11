@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myles Barney - PhD in Computer Science</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Three.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- OrbitControls for camera manipulation -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container flex justify-between items-center">
+            <h1 class="name">Myles Barney</h1>
+            <ul class="nav-links flex gap-16">
+                <li><a href="#home" data-section="home">Home</a></li>
+                <li><a href="#projects" data-section="projects">Projects</a></li>
+                <li><a href="#publications" data-section="publications">Publications</a></li>
+                <li><a href="#contact" data-section="contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 3D Canvas Container -->
+    <div id="canvas-container"></div>
+
+    <!-- Back to Solar System Button -->
+    <button id="back-btn" class="btn btn--primary">Back to Solar System</button>
+
+    <!-- Content Sections -->
+    <div class="content-container">
+        <!-- Home/About Section -->
+        <section id="home" class="content-section">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="card">
+                    <div class="card__body">
+                        <div class="about-content">
+                            <div class="about-text">
+                                <h3>Myles Barney</h3>
+                                <h4>PhD Candidate in Computer Science</h4>
+                                <p class="focus-area">Focus: Natural Language Processing, Machine Learning, Machine Translation, Human Computer Interaction </p>
+                                <p class="university">Brigham Young University</p>
+                                <div class="bio">
+                                    <p>I am a PhD candidate specializing in Natural Language Processing (NLP), Machine Learning (ML), and Machine Translation(MT). My research focuses on creating advanced MT models that can be used to preserve cultural heritage, encourage education for marginalized communities, and inspire conversations of trust and goodwill. I am passionate about creating AI systems that can break down language barriers and make information more accessible globally.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="content-section">
+            <div class="container">
+                <h2 class="section-title">Projects</h2>
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="card project-card">
+                        <div class="card__body">
+                            <h3 class="project-title">Finetuning SeamlessM4T on Low-Resource African Languages</h3>
+                            <p class="project-year">2025</p>
+                            <p class="project-description">Investigated the expansion of Meta's SeamlessM4T model to support 12 low-resource African languages. This project involved significant time spent debugging and analyzing Meta's code, with attempts to finetune the model to perform S2S translation for the novel languages. Unfortunately, the project was unsuccesful as Meta's current framework is not conducive to adding new language support.</p>
+                            <div class="technologies">
+                                <span class="tech-tag">PyTorch</span>
+                                <span class="tech-tag">Transformer Models</span>
+                                <span class="tech-tag">SeamlessM4T</span>
+                                <span class="tech-tag">African Language Data</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <!-- Project 2 -->
+                    <div class="card project-card">
+                        <div class="card__body">
+                            <h3 class="project-title">Reimagining Question Answering as Machine Translation</h3>
+                            <p class="project-year">2024</p>
+                            <p class="project-description">This project attempted to create a deep learning model that could perform both Question Answering (QA) and Machine Translation (MT) tasks. The unique aspect of the approach was to use tags to indicate the desired task as if it were an MNMT model. The model was trained to perform English-Chinese and Chinese-English MT as well as English-English QA. Evaluation was done on zero-shot Chinese-Chinese QA, English-Chinese QA, and Chinese-English QA.</p>
+                            <div class="technologies">
+                                <span class="tech-tag">Question Answering</span>
+                                <span class="tech-tag">BERT</span>
+                                <span class="tech-tag">MT</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">HuggingFace</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="card project-card">
+                        <div class="card__body">
+                            <h3 class="project-title">Improving Low Resource Language Translation Through Language Clustering</h3>
+                            <p class="project-year">2023</p>
+                            <p class="project-description">Developed a novel approach to tagging in Multilingual Neural Machine Translation (MNMT) models that incorporated language family groups to maximize positive knowledge transfer. This was accomplished by clustering languages based on their positions within the model's encoded latent space. The project explored different clustering methods and encoding methods to improve translation accuracy. Unfortunately, there was no significant improvement in model translation accuracy found in this project.</p>
+                            <div class="technologies">
+                                <span class="tech-tag">Scikit-learn</span>
+                                <span class="tech-tag">Word Embeddings</span>
+                                <span class="tech-tag">MNMT</span>
+                                <span class="tech-tag">Python</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Publications Section -->
+        <section id="publications" class="content-section">
+            <div class="container">
+                <h2 class="section-title">Publications</h2>
+                <div class="publications-list">
+                    <!-- Publication 1 -->
+                    <div class="card publication-card">
+                        <div class="card__body">
+                            <h3 class="publication-title">The Mysterious Case of Neuron 1512: Injectable Realignment Architectures Reveal Internal Characteristics of Meta's Llama 2 Model</h3>
+                            <p class="publication-authors">Brenden Smith, Dallin Baker, Clayton Chase, Myles Barney, Kaden Parker, Makenna Allred, Peter Hu, Alex Evans, Nancy Fulda</p>
+                            <p class="publication-venue">Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (ACL)</p>
+                            <p class="publication-year">2024</p>
+                            <div class="publication-abstract">
+                                <h4>Abstract</h4>
+                                <p>Large Language Models (LLMs) have an unrivaled and invaluable ability to "align" their output to a diverse range of human preferences, by mirroring them in the text they generate. The internal characteristics of such models, however, remain largely opaque. This work presents the Injectable Realignment Model (IRM) as a novel approach to language model interpretability and explainability. Inspired by earlier work on Neural Programming Interfaces, we construct and train a small network -- the IRM -- to induce emotion-based alignments within a 7B parameter LLM architecture. The IRM outputs are injected via layerwise addition at various points during the LLM's forward pass, thus modulating its behavior without changing the weights of the original model. This isolates the alignment behavior from the complex mechanisms of the transformer model. Analysis of the trained IRM's outputs reveals a curious pattern. Across more than 24 training runs and multiple alignment datasets, patterns of IRM activations align themselves in striations associated with a neuron's index within each transformer layer, rather than being associated with the layers themselves. Further, a single neuron index (1512) is strongly correlated with all tested alignments. This result, although initially counterintuitive, is directly attributable to design choices present within almost all commercially available transformer architectures, and highlights a potential weak point in Meta's pretrained Llama 2 models. It also demonstrates the value of the IRM architecture for language model analysis and interpretability.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="content-section">
+            <div class="container">
+                <h2 class="section-title">Contact</h2>
+                <div class="card">
+                    <div class="card__body">
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <h4>Email</h4>
+                                <p><a href="mailto:jane.doe@university.edu">myles.barney@gmail.com</a></p>
+                            </div>
+                            <div class="contact-item">
+                                <h4>Phone</h4>
+                                <p>+1 (801) 678-4346</p>
+                            </div>
+<!--                             <div class="contact-item">
+                                <h4>Office</h4>
+                                <p>Computer Science Building, Room 301</p>
+                                <p>University of Technology</p>
+                                <p>123 University Avenue, Tech City, TC 12345</p> -->
+<!--                             </div> -->
+                            <div class="contact-item">
+                                <h4>Social Links</h4>
+                                <div class="social-links">
+                                    <a href="https://github.com/myl15" target="_blank" class="social-link">GitHub</a>
+                                    <a href="https://linkedin.com/in/mylesbarney" target="_blank" class="social-link">LinkedIn</a>
+                                    <a href="https://scholar.google.com/citations?user=NJ8v5nwAAAAJ&hl=en" target="_blank" class="social-link">Google Scholar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Planet info tooltip -->
+    <div id="planet-tooltip" class="tooltip"></div>
+
+    <!-- Loading indicator -->
+    <div id="loading">
+        <div class="spinner"></div>
+        <p>Loading Solar System...</p>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
