@@ -3,8 +3,10 @@
   --color-background: rgba(252, 252, 249, 1);
   --color-surface: rgba(255, 255, 253, 1);
   --color-text: rgba(19, 52, 59, 1);
-  --color-text-secondary: rgba(98, 108, 113, 1);
-  --color-primary: rgba(33, 168, 221, 0.62);
+  --color-navbar-text: rgba(62,158,231,1);
+  --color-text-secondary: rgba(98, 108, 113, 1);        
+  --color-bar: rgba(227, 229, 231, 0.1);
+  --color-primary: rgba(36, 159, 231, 1);
   --color-primary-hover: rgba(29, 116, 128, 1);
   --color-primary-active: rgba(26, 104, 115, 1);
   --color-secondary: rgba(94, 82, 64, 0.12);
@@ -105,6 +107,7 @@
   :root {
     --color-background: rgba(31, 33, 33, 1);
     --color-surface: rgba(38, 40, 40, 1);
+    --color-bar: rgba(38, 40, 40, 0.01);
     --color-text: rgba(245, 245, 245, 1);
     --color-text-secondary: rgba(167, 169, 169, 0.7);
     --color-primary: rgba(6, 211, 241, 1);
@@ -659,7 +662,7 @@ select.form-control {
   top: 0;
   left: 0;
   right: 0;
-  background-color: rgba(38, 40, 40, 0.9);
+  background-color: var(--color-bar);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--color-border);
   z-index: 1000;
@@ -680,7 +683,7 @@ select.form-control {
 }
 
 .nav-links a {
-  color: var(--color-text);
+  color: var(--color-navbar-text);
   text-decoration: none;
   font-weight: var(--font-weight-medium);
   padding: var(--space-8) var(--space-16);
@@ -945,7 +948,7 @@ select.form-control {
 .tooltip {
   position: fixed;
   background-color: rgba(38, 40, 40, 0.95);
-  color: var(--color-text);
+  color: var(--color-navbar-text);
   padding: var(--space-8) var(--space-12);
   border-radius: var(--radius-base);
   font-size: var(--font-size-sm);
