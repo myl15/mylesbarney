@@ -1098,6 +1098,64 @@ img { display: block; max-width: 100%; }
 .lightbox-prev:hover,
 .lightbox-next:hover { color: var(--text); border-color: var(--border-hover); background: var(--surface); }
 
+/* ── Lightbox metadata bar ──────────────────── */
+.lightbox-meta {
+  position: absolute;
+  left: 50%;
+  bottom: 24px;
+  transform: translate(-50%, 12px);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  padding: 14px 24px;
+  max-width: min(90vw, 720px);
+  background: rgba(12, 16, 28, 0.72);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s var(--ease-standard), transform 0.35s var(--ease-standard);
+}
+.lightbox.open .lightbox-meta {
+  opacity: 1;
+  transform: translate(-50%, 0);
+  pointer-events: auto;
+}
+.lightbox-meta .meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.lightbox-meta .meta-item[hidden] { display: none; }
+.lightbox-meta .meta-label {
+  font-family: var(--font-mono, 'DM Mono', monospace);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+}
+.lightbox-meta .meta-value {
+  font-size: 0.9rem;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 640px) {
+  .lightbox-meta {
+    gap: 14px 22px;
+    padding: 12px 16px;
+    bottom: 12px;
+    max-width: calc(100vw - 24px);
+  }
+  .lightbox-meta .meta-value { font-size: 0.82rem; }
+}
+
 /* ── Responsive additions ───────────────────── */
 @media (max-width: 1024px) {
   .about-grid { grid-template-columns: 200px 1fr; gap: 36px; }

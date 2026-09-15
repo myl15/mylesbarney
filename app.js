@@ -173,6 +173,7 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 (function initLightbox() {
   const lightbox = document.getElementById('lightbox');
   const lbImg    = document.getElementById('lightbox-img');
+  const lbMeta   = document.getElementById('lightbox-meta');
   if (!lightbox || !lbImg) return;
 
   let items = [];
@@ -180,6 +181,27 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 
   function getItems() {
     return [...document.querySelectorAll('.gallery-item:not(.gallery-placeholder)')];
+  }
+
+  function updateMeta(el) {
+    if (!lbMeta || !el) return;
+    const fields = ['camera', 'film', 'date', 'location'];
+    let anyVisible = false;
+    fields.forEach(field => {
+      const item = lbMeta.querySelector(`.meta-item[data-field="${field}"]`);
+      if (!item) return;
+      const value = (el.dataset[field] || '').trim();
+      const valueEl = item.querySelector('.meta-value');
+      if (value) {
+        valueEl.textContent = value;
+        item.hidden = false;
+        anyVisible = true;
+      } else {
+        valueEl.textContent = '';
+        item.hidden = true;
+      }
+    });
+    lbMeta.style.display = anyVisible ? '' : 'none';
   }
 
   window.openLightbox = function(el) {
@@ -190,6 +212,7 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     if (!img) return;
     lbImg.src = img.src;
     lbImg.alt = img.alt;
+    updateMeta(el);
     lightbox.classList.add('open');
     document.body.style.overflow = 'hidden';
   };
@@ -204,13 +227,15 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     items = getItems();
     if (!items.length) return;
     current = (current + dir + items.length) % items.length;
-    const img = items[current].querySelector('img');
+    const nextEl = items[current];
+    const img = nextEl.querySelector('img');
     if (!img) return;
     lbImg.style.transform = `translateX(${dir > 0 ? '30px' : '-30px'})`;
     lbImg.style.opacity = '0';
     setTimeout(() => {
       lbImg.src = img.src;
       lbImg.alt = img.alt;
+      updateMeta(nextEl);
       lbImg.style.transform = 'translateX(0)';
       lbImg.style.opacity = '1';
     }, 150);

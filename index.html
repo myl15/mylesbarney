@@ -102,7 +102,7 @@
 
                 <!-- Bio + info -->
                 <div class="about-main">
-                    <h2 class="section-heading">Researcher, Linguist,<br><em>Language Advocate</em></h2>
+                    <h2 class="section-heading">Researcher, Linguist,<br><em>Engineer</em></h2>
                     <p class="about-lead">I'm a Computer Science PhD candidate at Brigham Young University, specializing in NLP, Machine Learning, and Machine Translation. My work lives at the intersection of deep learning and human language — with a particular focus on <strong>empowering people</strong> by improving accessibility through technology.</p>
                     <p class="about-body">My primary research interests include low-resource neural machine translation and cross-lingual semantic transfer. I'm also a teaching assistant for CS270 and a member of the BYU Matrix Lab.</p>
                     <p class="about-body">Beyond the lab, I'm driven by the conviction that language technology should preserve cultural heritage, empower marginalized communities, and build trust across linguistic divides. I like to envision a world where <strong>language barriers</strong> are no longer a part of our vocabulary.</p>
@@ -259,19 +259,14 @@
                 <span class="label-number">04</span>
                 <span class="label-text">Beyond the Lab</span>
             </div>
-            <h2 class="section-heading">Life Outside<br><em>the Terminal</em></h2>
+            <h2 class="section-heading">A Few of My <br><em>Favorite Things</em></h2>
 
             <!-- Hobby cards -->
             <div class="hobby-grid">
                 <div class="hobby-card">
-                    <div class="hobby-icon">📷</div>
-                    <h3 class="hobby-title">Film Photography</h3>
-                    <p class="hobby-desc">Shooting medium format on a Hasselblad 500C. There's something irreplaceable about the patience and intentionality that film demands.</p>
-                </div>
-                <div class="hobby-card">
-                    <div class="hobby-icon">🌏</div>
-                    <h3 class="hobby-title">Travel</h3>
-                    <p class="hobby-desc">Exploring the world with a camera and a curious mind. The people and cultures I encounter shape my perspective and fuel my curiosity.</p>
+                    <div class="hobby-icon">👨‍👩‍👧‍👦</div>
+                    <h3 class="hobby-title">Family</h3>
+                    <p class="hobby-desc">Spending quality time with my loved ones, creating memories, and nurturing relationships that are the foundation of my life.</p>
                 </div>
                 <div class="hobby-card">
                     <div class="hobby-icon">✝️</div>
@@ -279,10 +274,16 @@
                     <p class="hobby-desc">Active member of the Church of Jesus Christ of Latter-day Saints. My unique perspective on life and work is deeply influenced by my spiritual beliefs, especially the value of interfaith and intercultural dialogue.</p>
                 </div>
                 <div class="hobby-card">
-                    <div class="hobby-icon">👨‍👩‍👧‍👦</div>
-                    <h3 class="hobby-title">Family</h3>
-                    <p class="hobby-desc">Spending quality time with my loved ones, creating memories, and nurturing relationships that are the foundation of my life.</p>
+                    <div class="hobby-icon">📷</div>
+                    <h3 class="hobby-title">Film Photography</h3>
+                    <p class="hobby-desc">Shooting medium format on my Hasselblad 500C. There's something irreplaceable about the patience and intentionality that film demands.</p>
                 </div>
+                <div class="hobby-card">
+                    <div class="hobby-icon">🌏</div>
+                    <h3 class="hobby-title">Travel</h3>
+                    <p class="hobby-desc">Exploring the world with a camera and a curious mind. The people and cultures I encounter inspire me and fuel my curiosity.</p>
+                </div>
+                
                 <div class="hobby-card">
                     <div class="hobby-icon">🍽️</div>
                     <h3 class="hobby-title">Food</h3>
@@ -296,42 +297,58 @@
                 <p class="gallery-sub">A selection of medium format and 35mm film shots — Hasselblad 500C and Ricoh TLS 401.</p>
             </div>
             <div class="film-gallery">
-                <div class="gallery-item" onclick="openLightbox(this)">
+                <div class="gallery-item" onclick="openLightbox(this)"
+                     data-camera="Hasselblad 500C" data-film="Ilford HP5 @ 800 ISO"
+                     data-date="February 2026" data-location="Rome, Italy">
                     <img src="images/film-01.jpg" alt="Film photo 1"
                          onerror="this.parentElement.classList.add('gallery-placeholder')" />
                     <div class="gallery-overlay"><span>View</span></div>
                 </div>
-                <div class="gallery-item" onclick="openLightbox(this)">
+                <div class="gallery-item" onclick="openLightbox(this)"
+                     data-camera="Ricoh TLS 401" data-film="Kodak Portra 400"
+                     data-date="February 2026" data-location="Rome, Italy">
                     <img src="images/film-02.jpg" alt="Film photo 2"
                          onerror="this.parentElement.classList.add('gallery-placeholder')" />
                     <div class="gallery-overlay"><span>View</span></div>
                 </div>
-                <div class="gallery-item" onclick="openLightbox(this)">
+                <div class="gallery-item" onclick="openLightbox(this)"
+                     data-camera="Hasselblad 500C" data-film="Ilford SFX 200"
+                     data-date="November 2025" data-location="Great Salt Lake, Utah">
                     <img src="images/film-03.jpg" alt="Film photo 3"
                          onerror="this.parentElement.classList.add('gallery-placeholder')" />
                     <div class="gallery-overlay"><span>View</span></div>
                 </div>
-                <div class="gallery-item" onclick="openLightbox(this)">
+                <div class="gallery-item" onclick="openLightbox(this)"
+                     data-camera="Ricoh XRP Multi" data-film="Kodak Gold 200"
+                     data-date="September 2024" data-location="Banff, Canada">
                     <img src="images/film-04.jpg" alt="Film photo 4"
                          onerror="this.parentElement.classList.add('gallery-placeholder')" />
                     <div class="gallery-overlay"><span>View</span></div>
                 </div>
-                <div class="gallery-item" onclick="openLightbox(this)">
+                <div class="gallery-item" onclick="openLightbox(this)"
+                     data-camera="Ricoh TLS 401" data-film="Ilford SFX 200"
+                     data-date="August 2025" data-location="Oregon, USA">
                     <img src="images/film-05.jpg" alt="Film photo 5"
                          onerror="this.parentElement.classList.add('gallery-placeholder')" />
                     <div class="gallery-overlay"><span>View</span></div>
                 </div>
-                <div class="gallery-item" onclick="openLightbox(this)">
+                <div class="gallery-item" onclick="openLightbox(this)"
+                     data-camera="Hasselblad 500C" data-film="Expired Fuji Provia 100"
+                     data-date="August 2025" data-location="Washington, USA">
                     <img src="images/film-06.jpg" alt="Film photo 6"
                          onerror="this.parentElement.classList.add('gallery-placeholder')" />
                     <div class="gallery-overlay"><span>View</span></div>
                 </div>
-                <div class="gallery-item" onclick="openLightbox(this)">
+                <div class="gallery-item" onclick="openLightbox(this)"
+                     data-camera="Ricoh TLS 401" data-film="Ilford SFX 200"
+                     data-date="August 2025" data-location="Washington, USA">
                     <img src="images/film-07.jpg" alt="Film photo 7"
                          onerror="this.parentElement.classList.add('gallery-placeholder')" />
                     <div class="gallery-overlay"><span>View</span></div>
                 </div>
-                <div class="gallery-item" onclick="openLightbox(this)">
+                <div class="gallery-item" onclick="openLightbox(this)"
+                     data-camera="Ricoh TLS 401" data-film="Ilford SFX 200"
+                     data-date="September 2025" data-location="Salt Lake City, Utah">
                     <img src="images/film-08.jpg" alt="Film photo 8"
                          onerror="this.parentElement.classList.add('gallery-placeholder')" />
                     <div class="gallery-overlay"><span>View</span></div>
@@ -346,6 +363,24 @@
         <button class="lightbox-prev" onclick="event.stopPropagation(); shiftLightbox(-1)">&#8249;</button>
         <img id="lightbox-img" src="" alt="" />
         <button class="lightbox-next" onclick="event.stopPropagation(); shiftLightbox(1)">&#8250;</button>
+        <div id="lightbox-meta" class="lightbox-meta" onclick="event.stopPropagation()">
+            <div class="meta-item" data-field="camera">
+                <span class="meta-label">Camera</span>
+                <span class="meta-value"></span>
+            </div>
+            <div class="meta-item" data-field="film">
+                <span class="meta-label">Film</span>
+                <span class="meta-value"></span>
+            </div>
+            <div class="meta-item" data-field="date">
+                <span class="meta-label">Date</span>
+                <span class="meta-value"></span>
+            </div>
+            <div class="meta-item" data-field="location">
+                <span class="meta-label">Location</span>
+                <span class="meta-value"></span>
+            </div>
+        </div>
     </div>
 
     <!-- Contact Section -->
